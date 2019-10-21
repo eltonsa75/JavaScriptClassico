@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mostrar e Ocultar CSS Div</title>
+    <style>
+    #div1 {
+        background-color: #ff0000;
+        width: 100px;
+        height: 100px;
+    }
+
+    #div2 {
+        background-color: #00ff00;
+        width: 100px;
+        height: 100px;
+    }
+
+    #div3 {
+        background-color: #0000ff;
+        color: #ffffff;
+        width: 100px;
+        height: 100px;
+    }
+
+    .btnEscondido{
+        display: none;
+    }    
+    </style>
+
+<script type="text/javascript">
+        var div1;
+        var div2;
+        var div3;
+   
+
+        window.onload = function(){
+            div1 = document.getElementById("div1");
+            div2 = document.getElementById("div2");
+            div3 = document.getElementById("div3");
+           
+
+            var bt1 = document.getElementById("bt1");
+            bt1.onclick = mostrarDiv1;
+            var bt2 = document.getElementById("bt2");
+            bt2.onclick = mostrarDiv2;
+            var bt3 = document.getElementById("bt3");
+            bt3.onclick = mostrarDiv3;
+
+            // Esconder as Divs
+            div1.classList.add("btnEscondido");
+            div2.classList.add("btnEscondido");
+            div3.classList.add("btnEscondido");
+
+        }
+
+        function mostrarDiv1(){
+        div1.classList.add("btnEscondido");
+        div2.classList.add("btnEscondido");
+        div3.classList.add("btnEscondido");
+        }
+        function mostrarDiv2(){
+        div1.classList.add("btnEscondido");
+        div2.classList.remove("btnEscondido");
+        div3.classList.add("btnEscondido");
+            
+        }
+        function mostrarDiv3(){
+        div1.classList.add("btnEscondido");
+        div2.classList.add("btnEscondido");
+        div3.classList.remove("btnEscondido");
+            
+        }
+  </script>
+</head>
+
+<body>
+
+   <input type="checkbox" id="bt1" name="btn1">
+    <button id="bt2">Div 2</button>
+    <button id="bt3">Div 3</button>
+
+    <br /><br />
+    <div id="div1">
+        Div 1
+    </div>
+    <div id="div2">
+            Div 2
+        </div>
+        <div id="div3">
+                Div 3
+            </div>
+
+</body>
+
+</html>

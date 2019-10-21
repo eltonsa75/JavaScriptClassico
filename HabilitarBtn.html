@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Habilitar Botão </title>
+<script type="text/javascript">
+
+    function Habilitar(){
+        var campo1 = document.getElementById("campo1");
+
+        if(campo1.value == campo2.value)
+        {
+            botom.disabled = true;
+        }
+        else
+         {
+            botom.disabled = false;
+        }
+    }
+
+
+</script>
+
+
+</head>
+
+<body>
+
+    <input type="password" id="campo1" value="">
+    <input type="password" id="campo2" value="" onkeyup="Habilitar()">
+    <input type="button" id="botom" value="boton"/>
+    
+</body>
+</html>
